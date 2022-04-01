@@ -1,0 +1,19 @@
+h1 {
+    background: aqua;
+    color: red;
+}
+p {
+    background:green ;
+    color: blue;
+}
+p {
+    background: #b7abc2;
+    color: firebrick;
+}
+img {
+    width: 400;
+}
+a {
+    background: chartreuse;
+    color: blue;
+}
