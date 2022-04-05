@@ -1,0 +1,60 @@
+.body {
+    margin: 0;
+}
+.father {
+    height: 260px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+.children {
+    border: 5px solid cadetblue;
+    background: white;
+    width: 200px;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    flex-direction:column ;
+
+}
+.childzagolovok{
+    margin: 0px;
+    margin-top: 15px;
+}
+
+.zagolovok {
+    margin: 20px;
+
+    text-align: center;
+
+}
+.fa-regular {
+    margin-top: 15px;
+    display: block;
+    text-align: center;
+    font-size: 40px;
+}
+.fa-solid{
+    margin-top: 15px;
+    display: block;
+    text-align: center;
+    font-size: 40px;
+}
+
+.lorem {
+    margin: 0px;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+.btn{
+    color: cadetblue;
+    margin-top: 5px;
+    margin-block-end: 10px;
+    width: 90px;
+    height: 40px;
+}
