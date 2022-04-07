@@ -1,0 +1,27 @@
+.body{
+    margin: 0;
+}
+.box{
+    background: #a2a7cb;
+    width: 600px;
+    height: 250px;
+}
+.box:nth-child(2){
+    background: aqua;
+}
+.box1{
+    width: 450px;
+    height: 200px;
+    margin: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    left: 80px;
+    top:-65px ;
+}
+.box2{
+    background: #307ee3;
+    width: 130px;
+    height: 100px;
+    margin: 8px;
+}

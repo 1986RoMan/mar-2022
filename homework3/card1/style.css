@@ -1,0 +1,59 @@
+.body {
+    margin: 0px;
+}
+.father {
+    margin: 200px;
+    height: 260px;
+    width: 800px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+.kryg{
+    background: white;
+    border: 2px solid black;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    top: -25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.children {
+    border: 2px solid black;
+    background: white;
+    width:220px;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    flex-direction:column ;
+
+}
+.childzagolovok{
+    margin: 0px;
+    margin-top: 15px;
+}
+.lorem {
+    margin: 0px;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+.btn{
+    color: cadetblue;
+    margin-top: 5px;
+    margin-block-end: 10px;
+    width: 90px;
+    height: 40px;
+}
+.fa-solid{
+    font-size: 20px;
+}
