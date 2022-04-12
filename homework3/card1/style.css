@@ -8,11 +8,8 @@
     background: white;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
-    margin-left: 50px;
-    margin-right: 50px;
-
+  position: relative;
 }
 .kryg{
     background: white;
@@ -20,8 +17,8 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    position: relative;
-    top: -25px;
+    position: absolute;
+    top: 165px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,8 +35,8 @@
 
 }
 .childzagolovok{
-    margin: 0px;
-    margin-top: 15px;
+    font-size:16px ;
+    margin: 32px;
 }
 .lorem {
     margin: 0px;
