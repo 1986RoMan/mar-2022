@@ -35,12 +35,12 @@ let book={
 console.log(book);
 //За допомогою 3х різних prompt() отримати 3 слова які являються вашими Імям,
 //По-Батькові та роками. та вивести в консоль
-let I=prompt('імя');
-console.log(I);
-let B=prompt('по-батькові');
-console.log(B);
-let R=prompt('скільки років');
-console.log(R);
+let i=prompt('імя');
+console.log(i);
+let bb=prompt('по-батькові');
+console.log(bb);
+let r=prompt('скільки років');
+console.log(r);
 //За допомогою оператора typeof визначити типи наступних змінних та вивести їх в консоль.
     let a = 100;
     let b = '100';
