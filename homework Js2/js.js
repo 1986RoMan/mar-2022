@@ -50,25 +50,25 @@ let den= +prompt('yvedit den vid 1 do 7')
 switch (den){
     case 1:
         console.log('itu na roboty');
-        break
+        break;
     case 2:
         console.log('itu na roboty');
-        break
+        break;
     case 3:
         console.log('itu na roboty');
-        break
+        break;
     case 4:
         console.log('itu na roboty');
-        break
+        break;
     case 5:
         console.log('itu na roboty');
-        break
+        break;
     case 6:
         console.log('Spatu');
-        break
+        break;
     case 7:
         console.log('Spatu');
-        break
+        break;
     default:
         console.log('?????/')
 }
