@@ -109,3 +109,13 @@ function masuv6(arry){
     return sumserdne
 }
 console.log(masuv6([9, 2, 10]));
+//13 створити функцію, яка якщо приймає один аргумент, просто вивдоить його,
+// якщо два аргументи - складає або конкатенує їх між собою.
+function arg() {
+    if(arguments.length===1){
+    console.log(arguments[0])}
+    else if(arguments.length===2){
+        console.log(arguments[0]+''+arguments[1])
+    }
+}
+arg('game','over');
