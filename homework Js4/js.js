@@ -119,3 +119,17 @@ function arg() {
     }
 }
 arg('game','over');
+//14 створити функцію яка повертає найменьше число з масиву
+let arr=[-11,2,3,2,-6,67];
+function minn(){
+    let min=arr[0];
+    for (const number of arr) {
+        if(number<min){
+            min=number
+        }
+
+    }
+    return min
+}
+
+console.log(minn(arr));
