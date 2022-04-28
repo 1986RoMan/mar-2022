@@ -125,7 +125,7 @@ let maxmin=(array)=>{
 // та виводить його.
 let randomni=()=>{
     let masiv=[];
-    for (let i = 0; i<100; i++) {
+    for (let i = 0; i<10; i++) {
    masiv[i]=Math.round(Math.random(i)*100)
     }
         console.log(masiv)
@@ -133,9 +133,9 @@ let randomni=()=>{
 randomni();
 // - створити функцію яка заповнює масив рандомними числами в діапазоні від 0 до limit.
 // limit - аргумент, який характеризує кінцеве значення діапазону.
-let randomni2=(n)=>{
+let randomni2=(limit)=>{
     let masiv=[];
-    for (let i = 0; i<n; i++) {
+    for (let i = 0; i<limit; i++) {
         masiv[i]=Math.round(Math.random(i)*100)
     }
     console.log(masiv)
@@ -143,7 +143,7 @@ let randomni2=(n)=>{
 randomni2(20);
 // - Функція приймає масив та робить з нього новий масив в зворотньому порядку. [1,2,3] -> [3, 2, 1].
 let masuvRevers=(array)=>{
-    ri=array.length-1;
+    let ri=array.length-1;
     ara2=[];
     for (const araElement of array) {
         ara2[ri]=araElement
