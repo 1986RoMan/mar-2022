@@ -98,15 +98,15 @@ let masuv6=(array)=>{
     let sumserdne;
     for (let arryElement of array) {
         summa=summa+arryElement;
-        sumserdne=summa/array.length
     }
+        sumserdne=summa/array.length
     return sumserdne
 }
 console.log(masuv6([9, 2, 10]));
 // - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше,
 // а виводить найбільше (Math використовувати заборонено);
 let maxmin=(array)=>{
-    let max=array[1];
+    let max=array[0];
     let min=array[0];
     for (const item of array) {
         if(item<min){
@@ -114,12 +114,12 @@ let maxmin=(array)=>{
         }
         else if(item>max){
             max=item
-            console.log(max)
         }
     }
+            console.log(max)
         return min
 }
- console.log(maxmin([325352212,526,3,4,67,-5435,8,69,22,432536,6]));
+ console.log(maxmin([32,526,3,4,67,-5435,8,699999,22,43,6]));
 // - створити функцію яка заповнює масив рандомними числами
 // (цей код генерує рандомні числа в діапазоні від 0 до 100 - Math.round(Math.random()*100))
 // та виводить його.
