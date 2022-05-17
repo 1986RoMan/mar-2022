@@ -46,19 +46,31 @@
 //написати рекурсивну функцію, яка збирає всі назви класів з файлу
 //rules.html в окремий масив. масив вивести в консоль
 <script>
-  function recursij(elementu){
-   // console.log(elementu)
+  function foo(start){
     let arr=[]
-    let children =elementu.children;
-    for (const chaild of children) {
-      recursij(chaild);
-      if(chaild.classList.value!==''){
-       arr.push(chaild.classList.value)
-       console.log(arr)
-     }
+    let children = start.children;
+    for (const child of children) {
+     // console.log(child.classList)
+      for (const childElement of child.classList) {
+        if(childElement){
+          arr.push(childElement)};
+      }
+      foo(child);
     }
+    console.log(arr)
   }
-  recursij(document.body);
+  foo(document.body);
+arr=[2,34,5,6,78,4,[234435,33,[3,55,[12,4,67,8,8],6,8,90,],566,57],9,0,[2,4,5,6,78,9],9,0,3]
+function flatten(arr) {
+  if (Array.isArray(arr)) {
+    return arr.reduce(function(done,curr){
+      return done.concat(flatten(curr));
+    }, []);
+  } else {
+    return arr;
+  }
+}
+console.log(flatten(arr));
 </script>
 </body>
-</html></html>
+</html>
