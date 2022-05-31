@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Замовленні товари</h1>
+<script >
+    let url=new URL(location.href)
+    let produktu =url.searchParams.get('dat')
+    let parsProdukt=JSON.parse(produktu);
+    console.log(parsProdukt)
+    for (const parsProduktElement of parsProdukt) {
+        let htmlDivElement = document.createElement('div');
+        htmlDivElement.innerText=`${parsProduktElement.name} ${parsProduktElement.number} ${parsProduktElement.price}`
+        document.body.appendChild(htmlDivElement);
+    }
+    let buttonElement = document.createElement('button');
+    buttonElement.innerText='Clear localStorage'
+    document.body.appendChild(buttonElement);
+    buttonElement.onclick=()=>{
+        localStorage.clear();
+
+    }
+
+</script>
+
+</body>
+</html>

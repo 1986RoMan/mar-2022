@@ -1,0 +1,12 @@
+
+.post{
+    background: #307ee3;
+    margin: 10px;
+    width: 220px;
+    height: 250px;
+}
+.conteiner{
+    display: flex;
+    flex-wrap: wrap;
+}
+

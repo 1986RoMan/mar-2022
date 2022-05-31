@@ -107,4 +107,4 @@ for (const user of users) {
         location.href=`./user-detail.html?data=${JSON.stringify(favorites)}`
     }
 }
-console.log(localStorage.getItem('key3'));
+//console.log(localStorage.getItem('key3'));
