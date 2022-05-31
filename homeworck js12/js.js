@@ -79,7 +79,7 @@ fetch('https://jsonplaceholder.typicode.com/comments')
                block2.innerText=`${comment.email}`;
                const block3 = document.createElement('li');
                block3.innerText=`${comment.body}`;
-               block11.append(block0,block1,block2,block3)
+               block11.append(block0,block1,block2,block3);
 conteiner1.append(block11);
            }
 })
