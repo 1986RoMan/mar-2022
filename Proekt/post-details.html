@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .conteiner{
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+        .coment{
+            width: 100px;
+            height: 250px;
+            background: #307ee3;
+            margin: 3px;
+        }
+        .info{
+            background:chartreuse;
+        }
+    </style>
+
+</head>
+<body>
+<script>
+    let url =new URL(location.href);
+   let postJson=url.searchParams.get('data');
+    let post=JSON.parse(postJson);
+    const info = document.createElement('div');
+   info.innerText=`${JSON.stringify(post)}`
+    info.className='info';
+   const conteiner = document.createElement('div');
+   conteiner.className='conteiner'
+    fetch(`https://jsonplaceholder.typicode.com/posts/${post.id}/comments`)
+           .then(value => value.json())
+             .then(value => {
+                 for (const coments of value) {
+                     const coment = document.createElement('div');
+                     coment.innerText=`${coments.name}`
+                     coment.className='coment'
+                     conteiner.appendChild(coment)
+
+                 }
+             })
+    document.body.append(info)
+    document.body.appendChild(conteiner)
+</script>
+</body>
+</html>

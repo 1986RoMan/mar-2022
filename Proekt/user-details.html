@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .button1{
+            width: 90%;
+            margin: 0 auto;
+            display: block;
+        }
+        .posts{
+            background:lawngreen;
+            margin: 5px;
+            width: 280px;
+            height: 200px;
+
+        }
+        .postsConteiner{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .divka{
+            background: chartreuse;
+        }
+        .button2{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="userDetail" id="detail" ></div>
+<script>
+    const conteiner = document.createElement('div');
+    let url=new URL(location.href);
+    conteiner.className='conteiner'
+   let daniProUsera=url.searchParams.get('dani');
+    user=JSON.parse(daniProUsera);
+    const divka = document.getElementById('detail');
+    divka.className='divka'
+    divka.innerText=`${JSON.stringify(user)}`
+    const buttonTitle = document.createElement('button');
+    buttonTitle.innerText="posts of current user"
+    buttonTitle.className='button1';
+    const postsConteiner = document.createElement('div');
+    postsConteiner.className='postsConteiner'
+    buttonTitle.onclick=()=>{
+        fetch(`https://jsonplaceholder.typicode.com/users/${user.id}/posts`)
+        .then(value => value.json())
+        .then(value => {
+            for (const posts of value) {
+                     const postsBlok = document.createElement('div');
+                postsBlok.className='posts';
+                postsBlok.innerText=`${posts.title}`
+                const button2 = document.createElement('button');
+                button2.innerText='Perehid do comentariv'
+                button2.className='button2'
+                button2.onclick=()=>{
+                  location.href=`./post-details.html?data=${JSON.stringify(posts)}`
+                }
+                postsBlok.appendChild(button2)
+                postsConteiner.append(postsBlok)
+            }
+        })
+    }
+    conteiner.append(postsConteiner)
+    postsConteiner.appendChild(buttonTitle);
+document.body.append(conteiner)
+
+</script>
+</body>
+</html>
